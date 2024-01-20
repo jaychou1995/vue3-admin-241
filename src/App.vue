@@ -1,7 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>12343</div>
+  <div class="test">12343</div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.test {
+  color: $color;
+}
+</style>

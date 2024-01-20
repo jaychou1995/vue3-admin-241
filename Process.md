@@ -51,3 +51,32 @@ git push -u origin main
 ### 6. 配置husky 强制代码 在提交到git的时候必须格式化
 
 安装npm i -D husky
+
+npx husky-init
+
+配置npm run format "format": "prettier --write \"./\*_/_.{html,vue,ts,js,json,md}\""
+修改.husky的pre-commit 加入 npm run format
+
+### 7.安装,集成scss
+
+npm i sass -D 安装
+
+```javascript
+// 创建variable.scss 配置全局样式 例如;
+$color: red;
+
+// 在vite.config.ts中新增配置
+css: {
+  preprocessorOptions: {
+    scss: {
+      additionalData: `@import "./src/styles/variable.scss";`,
+    },
+  },
+},
+```
+
+### 8. 安装mock模拟数据
+
+### 9. 安装需要的创建
+
+normalize.css, axios, nprogress, element等
